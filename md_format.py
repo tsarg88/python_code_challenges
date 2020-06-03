@@ -24,3 +24,15 @@ print(md_format("Bold", "b"))
 print(md_format("Italics", "i"))
 print(md_format("Code", "c"))
 print(md_format("Ruby", "s"))
+
+# Method 2
+# def md_format(word, style):
+#     if style == "b":
+#         return "**{}**".format(word)
+#     elif style == "i":
+#         return "_{}_".format(word)
+#     elif style== "c":
+#         return "`{}`".format(word)
+#     else:
+#         return "~~{}~~".format(word)
+        
