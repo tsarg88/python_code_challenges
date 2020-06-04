@@ -45,11 +45,69 @@
 # 	return ' '.join(s)
 # print(space_me_out("space"))
 
-def detect_word(txt):
-	test = ''
-	for n in txt:
-		if n.islower():
-			test += n
-			''.join(test)
-	print(test)
-print(detect_word("UcUNFYGaFYFYGtNUH"))
+# def detect_word(txt):
+# 	test = ''
+# 	for n in txt:
+# 		if n.islower():
+# 			test += n
+# 			''.join(test)
+# 	print(test)
+# print(detect_word("UcUNFYGaFYFYGtNUH"))
+
+# def length(s):
+# 	total = 0
+# 	for i in s:
+# 		total += 1
+# 	return total
+# print(length("Edabit"))
+
+# from math import pi
+
+# def vol_pizza(radius, height):
+# 	return round((radius**2) * height * pi)
+# print(vol_pizza(15, 1.3))
+
+# def say_hello_bye(name, num):
+# 	if num == 1:
+# 		return 'Hello' + ' ' + name.title()
+# 	if num == 0:
+# 		return 'Bye' + ' ' + name.title()
+# print(say_hello_bye("alon", 0))
+
+# def score_calculator(easy, med, hard):
+# 	if easy < 0 or med < 0 or hard < 0:
+# 		return 'invalid'
+# 	else:
+# 		return (easy * 5) + (med * 10) + (hard * 20) 
+# Every operation needs to be in constant time 
+
+import sys
+class MinStack(object):
+   min=float('inf')
+   def __init__(self):
+      self.min=float('inf')
+      self.stack = []
+   def push(self, x):
+      if x<=self.min:
+         self.stack.append(self.min)
+         self.min = x
+      self.stack.append(x)
+   def pop(self):
+      t = self.stack[-1]
+      self.stack.pop()
+      if self.min == t:
+         self.min = self.stack[-1]
+         self.stack.pop()
+   def top(self):
+      return self.stack[-1]
+   def getMin(self):
+      return self.min
+m = MinStack()
+m.push(-2)
+m.push(0)
+m.push(-3)
+# print(m.getMin())
+# m.pop()
+# print(m.top())
+# print(m.getMin())
+print(m.top())
