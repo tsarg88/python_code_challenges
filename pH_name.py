@@ -10,9 +10,9 @@
 def pH_name(pH):
     if pH < 7 and pH >= 0:
         return 'acidic'
-    if pH == 7:
+    if pH >= 7 and pH < 8:
         return 'neutral'
-    if pH > 7 and pH <= 14:
+    if pH >= 8 and pH <= 14:
         return 'alkaline'
     else:
         return 'invalid'
