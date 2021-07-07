@@ -766,16 +766,29 @@ def findMergeNode(head1, head2):
 
 # print(age_difference(42, 21))
 
-def fizz_buzz(maximum):
-    list = []
-    for i in range(1, maximum+1):
-        if i % 3 == 0 and i % 5 == 0:
-            list.append("FizzBuzz")
-        elif i % 3 == 0:
-            list.append("Fizz")
-        elif i % 5 == 0:
-            list.append("Buzz")
-        else:
-            list.append(i)
-    return list
-print(fizz_buzz(15))
+# def fizz_buzz(maximum):
+#     list = []
+#     for i in range(1, maximum+1):
+#         if i % 3 == 0 and i % 5 == 0:
+#             list.append("FizzBuzz")
+#         elif i % 3 == 0:
+#             list.append("Fizz")
+#         elif i % 5 == 0:
+#             list.append("Buzz")
+#         else:
+#             list.append(i)
+#     return list
+# print(fizz_buzz(15))
+
+def largest_even(lst):
+    total = []
+    for i in lst:
+        if i % 2 == 0:
+            total.append(i)
+    if len(total) == 0:
+        return -1
+    else:
+        return total[-1]
+        
+   
+print(largest_even([3, 7, 5]))
