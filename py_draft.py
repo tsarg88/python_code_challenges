@@ -780,15 +780,26 @@ def findMergeNode(head1, head2):
 #     return list
 # print(fizz_buzz(15))
 
-def largest_even(lst):
-    total = []
-    for i in lst:
-        if i % 2 == 0:
-            total.append(i)
-    if len(total) == 0:
-        return -1
-    else:
-        return total[-1]
+# def largest_even(lst):
+#     total = []
+#     for i in lst:
+#         if i % 2 == 0:
+#             total.append(i)
+#     if len(total) == 0:
+#         return -1
+#     else:
+#         return total[-1]
         
    
-print(largest_even([3, 7, 5]))
+# print(largest_even([3, 7, 5]))
+
+def face_interval(num):
+    if type(num) is str:
+        return ":/"
+    difference = max(num) - min(num)
+    if difference in num:
+        return ":)"
+    else:
+        return ":("
+
+print(face_interval("sd"))
