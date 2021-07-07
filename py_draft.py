@@ -744,12 +744,17 @@ def findMergeNode(head1, head2):
 #     #     return round(total, 0)
 # print(sum_fractions([[18, 13], [4, 5]]))
 
-def box_seq(step):
-	if step == 0:
-		return 0
-	if step % 2 == 0:
-		return step
-	else:
-		return step+2
+# def box_seq(step):
+# 	if step == 0:
+# 		return 0
+# 	if step % 2 == 0:
+# 		return step
+# 	else:
+# 		return step+2
 
-print(box_seq(3))
+# print(box_seq(3))
+
+def dna_to_rna(dna):
+    translation = {65: 85, 84: 65, 71: 67, 67: 71}
+    return dna.translate(translation)
+print(dna_to_rna("ATTAGCGCGATATACGCGTAC"))
