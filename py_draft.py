@@ -754,7 +754,28 @@ def findMergeNode(head1, head2):
 
 # print(box_seq(3))
 
-def dna_to_rna(dna):
-    translation = {65: 85, 84: 65, 71: 67, 67: 71}
-    return dna.translate(translation)
-print(dna_to_rna("ATTAGCGCGATATACGCGTAC"))
+# def dna_to_rna(dna):
+#     translation = {65: 85, 84: 65, 71: 67, 67: 71}
+#     return dna.translate(translation)
+# print(dna_to_rna("ATTAGCGCGATATACGCGTAC"))
+
+# def age_difference(f_age, s_age):
+#     if f_age % s_age == 0:
+#         return 0
+#     else:
+
+# print(age_difference(42, 21))
+
+def fizz_buzz(maximum):
+    list = []
+    for i in range(1, maximum+1):
+        if i % 3 == 0 and i % 5 == 0:
+            list.append("FizzBuzz")
+        elif i % 3 == 0:
+            list.append("Fizz")
+        elif i % 5 == 0:
+            list.append("Buzz")
+        else:
+            list.append(i)
+    return list
+print(fizz_buzz(15))
