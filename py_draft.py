@@ -835,12 +835,29 @@ def findMergeNode(head1, head2):
 # dice_game([(1, 2), (3, 4), (5, 6)]) ➞ 21
 # dice_game([(1, 1), (5, 6), (6, 4)]) ➞ 0
 # dice_game([(4, 5), (4, 5), (4, 5)]) ➞ 27
-def dice_game(lst):
-    total = 0
-    for a, b in lst:
-        if a == b:
-            return 0
-        else:
-            total += a+b
-    return total
-print(dice_game([(1, 2), (3, 4), (5, 6)]))
+# def dice_game(lst):
+#     total = 0
+#     for a, b in lst:
+#         if a == b:
+#             return 0
+#         else:
+#             total += a+b
+#     return total
+# print(dice_game([(1, 2), (3, 4), (5, 6)]))
+
+# This is a reverse coding challenge. Normally you're given explicit directions 
+# with how to create a function. Here, you must generate your own function to 
+# satisfy the relationship between the inputs and outputs.
+# Your task is to create a function that, when fed the inputs below, produces the sample outputs shown.
+# Examples
+# mystery_func(152) ➞ 10
+# mystery_func(832) ➞ 48
+# mystery_func(19) ➞ 9
+# mystery_func(133) ➞ 9
+# test
+def mystery_func(num):
+	prod = 1
+	for i in str(num):
+		prod *= int(i)
+	return prod   
+print(mystery_func(152))        
