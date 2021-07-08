@@ -872,9 +872,20 @@ def findMergeNode(head1, head2):
 # mystery_func(19) ➞ 9
 # mystery_func(133) ➞ 9
 
-def mystery_func(num):
-	prod = 1
-	for i in str(num):
-		prod *= int(i)
-	return prod
-print(mystery_func(152))
+# def mystery_func(num):
+# 	prod = 1
+# 	for i in str(num):
+# 		prod *= int(i)
+# 	return prod
+# print(mystery_func(152))
+
+# Create a function that subtracts 1 from n (unless it ends in 0) k number of times. If n ends in 0, remove the 0.
+def not_good_math(n,k):
+    # print(str(n)[0])
+	for i in range(k):
+		if str(n)[-1] == '0':
+			n = int(str(n)[:-1])
+		else:
+			n -= 1
+	return n   
+print(not_good_math(22, 3))
