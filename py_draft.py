@@ -817,10 +817,30 @@ def findMergeNode(head1, head2):
 # count_overlapping([[1, 2], [5, 6], [5, 7]], 5) ➞ 2
 # count_overlapping([[1, 2], [5, 8], [6, 9]], 7) ➞ 2
 
-def count_overlapping(intervals, point):
+# def count_overlapping(intervals, point):
+#     total = 0
+#     for i in intervals:
+#         if point >= i[0] and point <= i[1]:
+#             total += 1
+#     return total
+# print(count_overlapping([[1, 2], [5, 6], [5, 7]], 5) )
+
+# using map with lambda
+# numbers = (1, 2, 3, 4)
+# result = map(lambda v: v * v, numbers)
+# print(list(result))
+
+# Create a function that takes in a list of tuples as input, and return John's score after his game has ended.
+# Examples
+# dice_game([(1, 2), (3, 4), (5, 6)]) ➞ 21
+# dice_game([(1, 1), (5, 6), (6, 4)]) ➞ 0
+# dice_game([(4, 5), (4, 5), (4, 5)]) ➞ 27
+def dice_game(lst):
     total = 0
-    for i in intervals:
-        if point >= i[0] and point <= i[1]:
-            total += 1
+    for a, b in lst:
+        if a == b:
+            return 0
+        else:
+            total += a+b
     return total
-print(count_overlapping([[1, 2], [5, 6], [5, 7]], 5) )
+print(dice_game([(1, 2), (3, 4), (5, 6)]))
