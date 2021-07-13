@@ -880,12 +880,33 @@ def findMergeNode(head1, head2):
 # print(mystery_func(152))
 
 # Create a function that subtracts 1 from n (unless it ends in 0) k number of times. If n ends in 0, remove the 0.
-def not_good_math(n,k):
-    # print(str(n)[0])
-	for i in range(k):
-		if str(n)[-1] == '0':
-			n = int(str(n)[:-1])
-		else:
-			n -= 1
-	return n   
-print(not_good_math(22, 3))
+# def not_good_math(n,k):
+#     # print(int(str(n)[0]))
+# 	for i in range(k):
+# 		if str(n)[-1] == '0':
+# 			n = int(str(n)[:-1])
+# 		else:
+# 			n -= 1
+# 	return n   
+# print(not_good_math(22, 3))
+
+# V followed by I is a Perfect Cadence
+# IV followed by I is a Plagal Cadence
+# V followed by Any chord other than I is an Interrupted Cadence
+# # Any chord followed by V is an Imperfect Cadence
+def find_cadence(chords):
+    beforeLast = (len(chords)-2)
+    if chords[beforeLast] == "V" and chords[-1] == "I":
+        return "perfect"
+    elif chords[beforeLast] == "IV" and chords[-1] == "I":
+        return 'plagal'
+    elif chords[beforeLast] == "V" and chords[-1] != "I":
+        return "interrupted"
+    elif chords[-1] == "V":
+        return "imperfect"
+    else:
+        return "no cadence"
+print(find_cadence(["I", "IV", "V"]))
+
+# test = ['Mary', 'had', 'a', 'little', 'lamb'] 
+# print('-'.join(test))
